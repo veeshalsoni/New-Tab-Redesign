@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+      "width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style type="text/css">
+    	html {
+    		height: 100%;
+    	}
+
+    	body {
+    		height: 100%;
+    	}
+    	
+    	body {
+    		margin: 0px;
+    		padding: 0px;
+    	}
+
+    	.mainDiv {
+    		height: 100%;
+    		display: flex;
+    		align-content: center;
+    		justify-content: space-between;
+    		flex-flow: column;
+    	}
+
+    	.rowDiv {
+    		display: flex;
+    		align-content: center;
+    		justify-content: space-between;
+    		flex-flow: row;
+    	}
+
+    	#clock {
+			font-size: 75px;
+		}
+
+		#reloadimage {
+			font-family: Lucida Sans Unicode;
+			font-size: 50px;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+		}
+
+		.image-text {
+			background: inherit;
+		    background-clip: inherit;
+			background-clip: text;
+			filter: invert(1) drop-shadow(3px 3px 3px gray );
+		}
+
+		.new-row {
+			width: 100%;
+		}
+
+		.toDoListType {
+			padding: 10px;
+			background: rgba(255, 250, 230, 0.5);
+		}
+
+		.todo {
+			padding: 10px 10px 10px 20px;
+			border-bottom: 1px solid lightgray;
+		}
+
+		.todoText {
+			font-size: 15px;
+		}
+
+		.todoRemove {
+			font-size: 17px;
+			border: 1px solid black;
+			padding: 3px;
+			color: red;
+			border-radius: 10px;
+		}
+
+		/* tiny reset */
+		/* title */
+		.todoListHeader{
+			color: white;
+			text-align: center;
+			font-size: 32px;
+			font-weight: 900;
+			border: 1px solid;
+			margin-bottom: 0px;
+			padding: 10px;
+			background: rgba(236, 236, 236, 0.36);
+		}
+
+		.tasks{
+			width: 300px;
+			margin-left: auto;
+			padding: 20px;
+		}
+
+		input[type=checkbox] {
+		  display: block;
+		}
+
+		label{
+			background: rgba(236, 236, 236, 0.36);
+			/*height: 69px;*/
+			width: 100%;
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid #2C3E50;
+			color: #fff;
+			text-transform: capitalize;
+			font-weight: 900;
+			font-size: 11px;
+			letter-spacing: 1px;
+			text-indent: 20px;
+			cursor: pointer;
+			transition: all 0.7s ease;
+			position: relative;
+			padding: 5px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+
+		label h3 {
+			width: 70%;
+		}
+
+		label h2 span{
+		  display: block;
+		  font-size: 12px;
+		  text-transform: capitalize;
+		  font-weight: normal;
+		  color: #fff;
+		}
+
+		.label-check:checked{
+			background: red;
+		}
+
+
+		.label-check {
+			background: white;
+			content:"";
+			width: 20px;
+			height: 20px;
+			background: #fff;
+			/*display: block;*/
+			/*position: absolute;*/
+			border-radius: 100%;
+			right: 20px;
+			top: 30%;
+			transition: border 0.7s ease
+		}
+
+		.addNew {
+			padding: 15px;
+			width: 70%;
+			opacity: 0.8;
+		}
+
+		#addNewButton{
+			padding: 15px;
+			width: 16%;
+			font-size: 13px;
+			color: white;
+			background: #ff202091;
+		}
+
+		.taskRemoveBtn {
+			padding: 15px;
+			width: 16%;
+			font-size: 13px;
+			color: white;
+			background: #ff202091;			
+		}
+
+    </style>
+</head>
+<body>
+	<div class="mainDiv">
+		<div class="rowDiv">
+		    <div id="clock" class="image-text">hh:mm</div>
+		    <span id="reloadimage" class="reload image-text">&#x21bb;</span>
+		</div>
+		<div class="rowDiv">
+			<div class="tasks">
+			  <!-- title -->
+			  <h1 class="todoListHeader">To-Do List</h1>
+			  <input class="addNew" id="addNewTodo" type="text" placeholder="Add New">
+			  <button id="addNewButton">+</button>
+			  <div id="taskList"> </div>
+			</div>	
+		</div>
+	</div>
+
+    <script src="newtabtodo.js"></script>
+</body>
+</html>
